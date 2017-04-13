@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--Toolbar-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_atools"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tool_bar_height"
+            android:background="?attr/colorPrimary"
+            android:minHeight="@dimen/tool_bar_height"
+            app:popupTheme="@style/MyOptionMenuStyle"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    </android.support.design.widget.AppBarLayout>
+
+    <com.rey.material.widget.Button
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/ripple_button_bg"
+        android:clickable="true"
+        android:drawableLeft="@drawable/atool_left"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:onClick="numberAddressQuery"
+        android:paddingLeft="10dp"
+        android:text="@string/query_location"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <com.rey.material.widget.Button
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/ripple_button_bg"
+        android:clickable="true"
+        android:drawableLeft="@drawable/atool_left"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:onClick="commonNumberQuery"
+        android:paddingLeft="10dp"
+        android:text="@string/query_common"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <com.rey.material.widget.Button
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/ripple_button_bg"
+        android:clickable="true"
+        android:drawableLeft="@drawable/atool_left"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:onClick="smsBackup"
+        android:paddingLeft="10dp"
+        android:text="@string/query_sms_back"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+</LinearLayout>

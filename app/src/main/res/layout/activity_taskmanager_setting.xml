@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <!--Toolbar-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_task_setting"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        app:popupTheme="@style/MyOptionMenuStyle"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="?attr/colorPrimary"
+        android:minHeight="@dimen/tool_bar_height" />
+
+    <com.ahyaobin.mobile.widget.SettingLayout
+        android:id="@+id/setting_task_show_system"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:setting_name="系统进程"
+        app:setting_sub_name="显示系统进程"/>
+
+    <com.ahyaobin.mobile.widget.SettingLayout
+        android:id="@+id/setting_task_auto_kill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:setting_name="锁屏清理"
+        app:setting_sub_name="锁屏清理进程没有开启"/>
+
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--Toolbar-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/task_manager_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tool_bar_height"
+            android:background="?attr/colorPrimary"
+            android:minHeight="@dimen/tool_bar_height"
+            app:popupTheme="@style/MyOptionMenuStyle"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="50">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lv_taskmanager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.ahyaobin.mobile.widget.HintView
+            android:id="@+id/hint_task_hint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tv_process_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="运行中进程：" />
+
+        <TextView
+            android:id="@+id/tv_mem_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="剩余/总内存：" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_button_bg"
+            android:onClick="selectAll"
+            android:text="全选"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_button_bg"
+            android:onClick="unSelect"
+            android:text="反选"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_button_bg"
+            android:onClick="killAll"
+            android:text="一键清理"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_task_setting"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_button_bg"
+            android:text="设置"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

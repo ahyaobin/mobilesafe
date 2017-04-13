@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--顶部分数-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_safe_score"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.7"
+                android:padding="15dp"
+                android:src="@drawable/safe_circle_bg" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.8"
+                android:src="@drawable/safe_circle_white_bg" />
+
+            <TextView
+                android:id="@+id/tv_safe_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:includeFontPadding="false"
+                android:text="100"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="45dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tv_safe_score"
+                android:paddingTop="5dp"
+                android:text="分"
+                android:textColor="#999797"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.rey.material.widget.Button
+            android:id="@+id/tv_safe_lost_find"
+            style="@style/tv_four_main"
+            android:drawableRight="@drawable/ic_security_light"
+            android:text="@string/safe_lost_find" />
+
+        <com.rey.material.widget.Button
+            android:id="@+id/tv_safe_anti_virus"
+            style="@style/tv_four_main"
+            android:drawableRight="@drawable/ic_antivirus_light"
+            android:text="@string/safe_anti_virus" />
+
+        <com.rey.material.widget.Button
+            android:id="@+id/tv_task_manager"
+            style="@style/tv_four_main"
+            android:drawableRight="@drawable/ic_tune_light"
+            android:text="@string/safe_task_manager" />
+
+        <com.rey.material.widget.Button
+            android:id="@+id/tv_app_manager"
+            style="@style/tv_four_main"
+            android:drawableRight="@drawable/ic_app_light"
+            android:text="@string/safe_soft_manager" />
+    </LinearLayout>
+
+</LinearLayout>
